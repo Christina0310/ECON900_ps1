@@ -19,18 +19,18 @@ for i in range(1,161):#one_file_name in glob.glob("html_files/*.html"):
         boardgames_rows = boardgames_table.find_all("tr", {"id":"row_"})
         for r in boardgames_rows: 
             boardgames_name = r.find("td", {"class": "collection_objectname"}).find("div",{"style":"z-index:1000;"}).find("a").text
-            boardgames_neg_year = r.find("td", {"class": "collection_objectname"}).find("div",{"style":"z-index:1000;"}).find("a").text[1]
+            #boardgames_neg_year = r.find("td", {"class": "collection_objectname"}).find("div",{"style":"z-index:1000;"}).find("a").text[1]
             boardgames_ratings= r.find_all("td",{"class":"collection_bggrating"})
             boardgames_geek_ratingq= boardgames_ratings[0].text #next(game_iter).text
             boardgames_ave_ratingq = boardgames_ratings[1].text
             boardgames_num_votersq = boardgames_ratings[2].text
-            boardgames_year = boardgames_neg_year[1:5]
+            #boardgames_year = boardgames_neg_year[1:5]
             boardgames_geek_rating = float(boardgames_geek_ratingq)
             boardgames_ave_rating = float(boardgames_ave_ratingq)
             boardgames_num_voters = int(boardgames_num_votersq)
             df = df.append({ 
                 'title': boardgames_name,
-                'year': boardgames_year,
+                #'year': boardgames_year,
                 'geek_rating': boardgames_geek_rating,
                 'average_rating': boardgames_ave_rating,
                 'num_of_voters': boardgames_num_voters
