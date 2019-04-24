@@ -39,6 +39,7 @@ RESULTS OF MACHINE LEARNING:
 Reason for choosing kmc: I choose kmean clustering because there is no specific categories shown in my data, so I conducted unsupervised learning for classification. 
 
 Results of kmc show: If I classify game into 4 categories, it results in the following: 
+		   
 		   a. Low Number_of_voting, Low rating
 
            b. Low or medium Number_of_voting, Medium rating
