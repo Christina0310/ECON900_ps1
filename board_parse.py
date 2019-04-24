@@ -8,7 +8,7 @@ if not os.path.exists("parsed_files"):
 
 df = pd.DataFrame()
 
-for i in range(1,50):#one_file_name in glob.glob("html_files/*.html"):
+for i in range(1,161):#one_file_name in glob.glob("html_files/*.html"):
         current_page = str(i)
         one_file_name ="html_files/boardgamegeek" + current_page + ".html"
         print("parsing " + one_file_name)
